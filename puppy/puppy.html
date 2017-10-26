@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Puppy Quiz</title>
+<style>
+body {
+background-color: lightblue;
+font-family: Helvetica;
+}
+
+#main {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+
+#header {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: beige;
+background-image: url("code.jpg");
+color: white;
+}
+
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+
+button {
+width: 100px;
+margin-top: 20px;
+}
+
+</style>
+
+
+</head>
+<body>
+<div id="main">
+<div id="header">
+
+<h1>Puppy Quiz</h1>
+</div>
+<form id="form1">
+<fieldset>
+
+<h2> 1. <img src="shepherd.jpg"> </h2>
+<label for="shep_shepherd"><input type="radio" name="shepherd" value="10" id="shep_shepherd" />German Shepherd</label>
+<label for="shep_belgian"><input type="radio" name="variable" value="0" id="shep_belgian" />Belgian Malinois</label>
+<label for="shep_inuit"><input type="radio" name="variable" value="0" id="shep_inuit" />Northern Inuit</label>
+<label for="shep_king"><input type="radio" name="variable" value="0" id="shep_king"/>King Shepherd</label>
+
+
+<h2> 2. Belgian Malinois</h2>
+<label for="bel_shepherd"><input type="radio" name="belgian" value="0" id="bel_shepherd" />German Shepherd</label>
+<label for="bel_belgian"><input type="radio" name="belgian" value="10" id="bel_belgian" />Belgian Malinois</label>
+<label for="bel_inuit"><input type="radio" name="belgian" value="0" id="bel_inuit" />Northern Inuit</label>
+<label for="bel_king"><input type="radio" name="belgian" value="0" id="bel_king"/>King Shepherd</label>
+
+
+<h2> 3. Great Dane </h2>
+<label for="dane_dane"><input type="radio" name="dane" value="10" id="dane_dane" />Great Dane</label>
+<label for="dane_boxer"><input type="radio" name="dane" value="0" id="dane_boxer" />Boxer</label>
+<label for="dane_weimaraner"><input type="radio" name="dane" value="0" id="dane_weimaraner" />Weimaraner</label>
+<label for="dane_dalmatian"><input type="radio" name="dane" value="0" id="dane_dalmatian"/>Dalmatian</label>
+
+
+<h2> 4. Boxer </h2>
+<label for="box_pit"><input type="radio" name="boxer" value="0" id="box_pit" />Pit Bull</label>
+<label for="box_dane"><input type="radio" name="boxer" value="0" id="box_dane" />Great Dane</label>
+<label for="box_boxer"><input type="radio" name="boxer" value="10" id="box_boxer" />Boxer</label>
+<label for="box_cane"><input type="radio" name="boxer" value="0" id="box_cane"/>Cane Corso</label>
+
+
+<h2> 5. Vizsla </h2>
+<label for="viz_pointer"><input type="radio" name="vizsla" value="0" id="viz_pointer" />German Shorthaired Pointer</label>
+<label for="viz_weimaraner"><input type="radio" name="vizsla" value="0" id="viz_weimaraner" />Weimaraner</label>
+<label for="viz_rhodesian"><input type="radio" name="vizsla" value="0" id="viz_rhodesian" />Rhodesian Ridgeback</label>
+<label for="viz_vizsla"><input type="radio" name="vizsla" value="10" id="viz_vizsla"/>Vizsla</label>
+
+
+<h2> 6. Chow Chow</h2>
+<label for="chow_chow"><input type="radio" name="chow" value="10" id="chow_chow" />Chow Chow</label>
+<label for="chow_malamute"><input type="radio" name="chow" value="0" id="chow_malamute" />Alaskan Malamute</label>
+<label for="chow_newfoundland"><input type="radio" name="chow" value="0" id="chow_newfoundland" />Newfoundland</label>
+<label for="chow_poodle"><input type="radio" name="chow" value="0" id="chow_poodle"/>Poodle</label>
+
+
+<h2> 7. French Bulldog </h2>
+<label for="french_english"><input type="radio" name="french" value="0" id="french_english" />English Bulldog</label>
+<label for="french_pug"><input type="radio" name="french" value="0" id="french_pug" />Pug</label>
+<label for="french_french"><input type="radio" name="french" value="10" id="french_french" />French Bulldog</label>
+<label for="french_shar"><input type="radio" name="french" value="0" id="french_shar"/>Shar Pei</label>
+
+
+<h2> 8. <img src="australian.jpg" width= "70%"> </h2>
+<label for="aus_border"><input type="radio" name="australian" value="0" id="aus_border" />Border Collie</label>
+<label for="aus_brittany"><input type="radio" name="australian" value="0" id="aus_brittany" />Brittany</label>
+<label for="aus_australian"><input type="radio" name="australian" value="10" id="aus_australian" />Australian Shepherd</label>
+<label for="aus_collie"><input type="radio" name="australian" value="0" id="aus_collie"/>Collie</label>
+
+
+<h2> 9. Brittany </h2>
+<label for="brit_border"><input type="radio" name="brittany" value="0" id="brit_border" />Border Collie</label>
+<label for="brit_brittany"><input type="radio" name="brittany" value="10" id="brit_brittany" />Brittany</label>
+<label for="brit_australian"><input type="radio" name="brittany" value="0" id="brit_australian" />Australian Shepherd</label>
+<label for="brit_collie"><input type="radio" name="brittany" value="0" id="brit_collie"/>Collie</label>
+
+
+<h2> 10. shar pei</h2>
+<label for="shar_english"><input type="radio" name="shar" value="0" id="shar_english" />English Bulldog</label>
+<label for="shar_pug"><input type="radio" name="shar" value="0" id="shar_pug" />Pug</label>
+<label for="shar_french"><input type="radio" name="shar" value="0" id="shar_french" />French Bulldog</label>
+<label for="shar_shar"><input type="radio" name="shar" value="10" id="shar_shar"/>Shar Pei</label>
+
+
+<button type="submit" value="Submit">Submit</button>
+</fieldset>
+</form>
+
+
+<p>Your grade is: <span id="grade">__</span></p>
+<p id="grade2"></p>
+
+
+<script>
+document.getElementById("form1").onsubmit=function() {
+       shepherd = parseInt(document.querySelector('input[name = "shepherd"]:checked').value);
+	   belgian = parseInt(document.querySelector('input[name = "belgian"]:checked').value);
+	   dane = parseInt(document.querySelector('input[name = "dane"]:checked').value);
+	   boxer = parseInt(document.querySelector('input[name = "boxer"]:checked').value);
+	   vizsla = parseInt(document.querySelector('input[name = "vizsla"]:checked').value);
+	    chow = parseInt(document.querySelector('input[name = "chow"]:checked').value);
+	   french = parseInt(document.querySelector('input[name = "french"]:checked').value);
+	   australian = parseInt(document.querySelector('input[name = "australian"]:checked').value);
+	   brittany = parseInt(document.querySelector('input[name = "brittany"]:checked').value);
+		shar   = parseInt(document.querySelector('input[name = "shar"]:checked').value);
+	   
+
+	   result = shepherd + belgian + dane + boxer + vizsla + chow + french + australian + brittany + shar;
+	   
+	document.getElementById("grade").innerHTML = result;
+
+ grading = [
+ 		{score:(0),feedback:"You're a cat person", image: "0.jpg"},
+ 		{score:(10),feedback:"What is a dog?", image: "10.jpg"},
+ 		{score:(20),feedback:"You've met a dog...once", image: "20.jpg"},
+ 		{score:(30),feedback:"", image: "30.jpg"},
+ 		{score:(40),feedback:"You most likely owned a dog.", image: "40.jpg"},
+ 		{score:(50),feedback:"You most likely had a family dog.", image: "50.jpg"},
+ 		{score:(60),feedback:"", image: "60.jpg"},
+ 		{score:(70),feedback:"You're an average dog owner.", image: "70.jpg"},
+ 		{score:(80),feedback:"Almost!", image: "80.jpg"},
+ 		{score:(90),feedback:"So close!", image: "90.jpg"},
+ 		{score:(100),feedback:"Yay! You know your puppies!", image: "100.jpg"},
+	   
+	   ];
+	  
+for(i=0; i<grading.length; i++) {
+    if(result == grading[i].score) {
+    result2 = grading[i].feedback + "<br /><img src='" + grading[i].image + "' width='300'  />";
+	  }
+	  }
+
+
+
+document.getElementById("grade2").innerHTML = result2; 
+return false; // required to not refresh the page; just leave this here
+} //this ends the submit function
+
+</script>
+
+
+</div>
+</body>
+</html>

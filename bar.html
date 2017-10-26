@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+font-family: Helvetica;
+font-size: 16px;
+}
+
+.bars {
+background-color: blue;
+height: 25px;
+margin: 10px 0 0 0;
+transition:width 1s ease-in;
+-webkit-transition:width 1s ease-in;
+-moz-transition:width 1s ease-in;
+-o-transition:width 1s ease-in;
+transition:width 1s ease-in;
+}
+
+#bar0 {
+width: 842px;
+}
+
+#bar1 {
+width: 777px;
+}
+
+#bar2 {
+width: 236px;
+}
+.bars {
+background-color: blue;
+width: 300px;
+height: 25px;
+margin: 10px 0 0 0;
+}
+
+.number {
+color: white;
+text-align: right;
+padding: 3px;
+font-size: 12px; 
+}
+
+#main
+{
+border-top: 1px solid black;
+border-bottom: 1px solid black;
+overflow: auto;
+padding: 10px;
+margin-top: 10px;
+}
+
+.tooltip {
+    display:none;
+    background: beige;
+    font-size:14px;
+    height:25px;
+    border-radius: 5px;
+    padding-top: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-bottom: 0px;
+    color: black;
+    border: 1px solid black;
+  }
+
+</style>
+
+
+</head>
+<body>
+<h1> A Tale of Three Cities</h1>
+
+<form id="form1">
+<select id="sel" onChange="selMeasure()">
+  <option value="1">Population</option>
+  <option value="2">Housing Units</option>  
+  <option value="3">Households</option>  
+</select>
+</form>
+
+<div id="cat"></div>
+
+<div id="bar0" class="bars">
+<p id="bartext0" class="number"></p>
+</div>
+<div id="name0"></div>
+
+
+<div id="bar1" class="bars">
+<p id="bartext1" class="number"></p>
+</div>
+<div id="name1"></div>
+
+
+<div id="bar2" class="bars">
+<p id="bartext2" class="number"></p>
+</div>
+<div id="name2"></div>
+
+
+
+<script>
+var cities = [
+{name: "Austin", Population: 842, Units: 354, Households: 322, tip: "live music capital"},
+{name: "Fort Worth", Population: 777, Units: 291, Households: 257, tip: "near Dallas"},
+{name: "Lubbock", Population: 236, Units: 95, Households: 86, tip: "TX Tech"}
+];
+
+var measures = Object.keys(cities[0]);
+
+for (var i = 0; i<cities.length; i++) {
+document.getElementById("name" + i).innerHTML= cities[i].name;
+document.getElementById("bartext" + i).innerHTML= cities[i].Population;
+document.getElementById("bar" + i).style.width = cities[i].Population/10 + "%";
+};
+
+
+function writeData(x) {
+    for (var i = 0; i<cities.length; i++) {
+    document.getElementById("name" + (i)).innerHTML= eval("cities[i]." + measures[0]);
+    document.getElementById("bartext" + (i)).innerHTML= eval("cities[i]." + measures[x]);
+    document.getElementById("bar" + (i)).style.width = eval("cities[i]." + measures[x])/10 + "%";
+    document.getElementById("bar" + (i)).title= eval("cities[i]." + measures[4]); 
+    }
+    //city and tip do not need to change for each measure. 
+
+    // this area inserts the Category as a heading 
+    document.getElementById("cat").innerHTML = "<strong>" + measures[x] + "</strong>";
+};
+
+writeData(1); // this is where we call the function the first time. 
+
+// function to change based on dropdown
+function selMeasure() { // function that writes the data based on the dropdown selection
+var m = document.getElementById("sel").value;
+writeData(m); 
+};
+
+$( document ).ready(function() {
+  $("[title]").tooltip({offset: [10, -30]});
+
+    });
+    
+
+
+</script>
+
+
+</body>
+</html>
